@@ -31,4 +31,4 @@ user = spotifyObject.current_user()
 class ParsJson:
 
     with open('data.txt', 'w') as outfile:
-        json.dumps(user, sort_keys=True, indent=4)
+    json.dump(data, outfile)
