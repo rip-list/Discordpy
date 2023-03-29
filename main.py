@@ -1,7 +1,6 @@
 import discord
 import json
 
-
 from discord.ext import commands
 
 import config
@@ -14,11 +13,14 @@ bot.remove_command('help')
 @bot.event
 async def on_ready():
     print("Я запущен!")
-    with open('data.txt', 'w') as outfile:
-        json.dump(config.user)
+    config.ParsJson()
 
+    if config.ParsJson() == True:
+        print("dump complite succesfull")
+    else:
+        print("no? bot dont work?")
 
-
+ # https://youtu.be/5cb9VpoA9wA
 @bot.command()
 async def hi(ctx):
     await ctx.send('Hi')
@@ -36,4 +38,4 @@ async def _user_image(ctx):
     await ctx.send(json.dumps(config.user))
 
 
-bot.run('')
+bot.run('MTA4Nzc4NDIyNjI3Mjg0MTc0OQ.GUp8b7.OtI_ZAhlY2yQNjVQIMF4x6orYOPkEAx_bdk7UM')
