@@ -6,7 +6,7 @@ settings = {
 <<<<<<< HEAD
     'token': '',
 =======
-    'token': 'MTA4Nzc4NDIyNjI3Mjg0MTc0OQ.G0M2k5.FhJlQ7GRN05h8J1D4kx5SDYOJ3`9A06FXjcYUYE',
+    'token': '',
 >>>>>>> 6243af2 (дописал ещё говнокода)
     'prefix': '-',
     'bot': 'ADOOM',
@@ -20,7 +20,7 @@ spotify_info = {
     'CLIENT_SECRET': '',
 =======
     'CLIENT_ID': '67df0c7657a042b89a51269369e1a288',
-    'CLIENT_SECRET': '8de3cfe110cf457db2eeb90165c19839',
+    'CLIENT_SECRET': '',
 >>>>>>> 6243af2 (дописал ещё говнокода)
     'redirectURL': "http://example.com"
 }
