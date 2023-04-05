@@ -15,12 +15,12 @@ async def on_ready():
     print("Я запущен!")
     config.ParsJson()
 
-    if config.ParsJson() == True:
+    if config.ParsJson():
         print("dump complite succesfull")
     else:
         print("no? bot dont work?")
 
- # https://youtu.be/5cb9VpoA9wA
+
 @bot.command()
 async def hi(ctx):
     await ctx.send('Hi')
@@ -35,7 +35,7 @@ async def _music(ctx):
 
 @bot.command(name='ui')
 async def _user_image(ctx):
-    await ctx.send(json.dumps(config.user))
+    await ctx.send()
 
 
-bot.run('MTA4Nzc4NDIyNjI3Mjg0MTc0OQ.GUp8b7.OtI_ZAhlY2yQNjVQIMF4x6orYOPkEAx_bdk7UM')
+bot.run(config.settings["token"])
