@@ -45,7 +45,10 @@ class ParsJson:
 =======
 def ParsJson():
     with open('data.txt', 'w') as outfile:
-        json.dumps(user)
+        json.dump(user, outfile)
+
+    return True
+
 
     return True
 >>>>>>> 6243af2 (дописал ещё говнокода)
