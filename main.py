@@ -1,10 +1,9 @@
-import discord
 import json
-
-from discord.ext import commands
-
+import discord
 import config
+from discord.ext import commands
 from config import spotify_info
+from connectdb import cursor
 
 bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 bot.remove_command('help')
@@ -13,17 +12,12 @@ bot.remove_command('help')
 @bot.event
 async def on_ready():
     print("Я запущен!")
-    config.ParsJson()
-
-    if config.ParsJson():
-        print("dump complite succesfull")
-    else:
-        print("no? bot dont work?")
+    print(cursor.fetchall())
 
 
-@bot.command()
+@bot.command(name='hi')
 async def hi(ctx):
-    await ctx.send('Hi')
+    await ctx.send(f"user {str(ctx.message.author.name)} use command {hi} ")
     print(f"user {str(ctx.message.author.name)} use command {hi} ")
 
 
