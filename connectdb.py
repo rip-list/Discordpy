@@ -9,7 +9,7 @@ def fib(n):
         a, b = b, a + b
 
 
-connection = sqlite3.connect(':memory:')
+connection = sqlite3.connect('usr_info.db')
 cursor = connection.cursor()
 with connection:
     cursor.execute('''CREATE TABLE IF NOT EXISTS fib (
